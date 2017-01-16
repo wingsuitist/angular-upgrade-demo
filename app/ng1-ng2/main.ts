@@ -1,9 +1,9 @@
+import upgradeAdapter from './upgradeAdapter';
 import { Ng2Service } from './ng2.service';
 import { Ng2ItemComponent } from './ng2-item.component';
 import { AppComponent } from './app.component';
-import upgradeAdapter from './upgradeAdapter';
 
-upgradeAdapter.addProvider(Ng2Service);
+upgradeAdapter.downgradeNg2Provider(Ng2Service);
 
 angular.element(document).ready(() => { 
     let app = angular.module('ng1ng2');
