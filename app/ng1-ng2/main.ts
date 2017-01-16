@@ -1,4 +1,4 @@
-import upgradeAdapter from './upgradeAdapter';
+import { upgradeAdapter } from './upgradeAdapter';
 import { Ng2Service } from './ng2.service';
 import { Ng2ItemComponent } from './ng2-item.component';
 import { AppComponent } from './app.component';

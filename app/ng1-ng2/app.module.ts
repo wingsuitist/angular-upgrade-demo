@@ -7,7 +7,7 @@ import { Ng2ListComponent }  from './ng2-list.component';
 import { Ng2ItemComponent }  from './ng2-item.component';
 import { Ng2Service }  from './ng2.service';
 
-const adapter = new UpgradeAdapter(forwardRef(() => AppModule));
+import { upgradeAdapter } from './upgradeAdapter';
 
 @NgModule({
   imports: [
@@ -17,7 +17,7 @@ const adapter = new UpgradeAdapter(forwardRef(() => AppModule));
     AppComponent,
     Ng2ListComponent,
     Ng2ItemComponent,
-    adapter.upgradeNg1Component('ng1Item')
+    upgradeAdapter.upgradeNg1Component('ng1Item')
   ],
   bootstrap: [ AppComponent ],
   providers: [ Ng2Service ]
