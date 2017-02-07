@@ -7,7 +7,7 @@ import { Ng2ListComponent }  from './ng2-list.component';
 import { Ng2ItemComponent }  from './ng2-item.component';
 import { Ng2Service }  from './ng2.service';
 
-import { upgradeAdapter } from './upgradeAdapter';
+export const upgradeAdapter = new UpgradeAdapter(forwardRef(() => AppModule));
 
 @NgModule({
   imports: [
